@@ -1,0 +1,700 @@
+<app-header-one [sticky]="true"></app-header-one>
+
+<!-- Home slider start-->
+<section class="p-0">
+  <app-slider 
+    [sliders]="sliders" 
+    [textClass]="'text-center'"
+    [category]="'fashion'"
+    [buttonText]="'shop now'"> 
+  </app-slider>
+</section>
+<!-- Home slider End -->
+<section class="p-0">
+  <div class="container">
+    <div class="row ventas">
+      <div class="col-md-2" style="display: flex;">
+        
+      </div>
+      <div class="col-md-2" style="display: flex;">
+        <div>
+          <img [src]="imagen1" class="truck" alt="truck">
+        </div>
+        <div>
+          <label class="label-1">ENVÍO GRATIS <br><span class="label-2">Envío gratis en toda La Paz. O pedidos superiores a los $125 Bo.</span></label>
+      
+        </div>
+      </div>
+      <div class="col-md-2" style="display: flex;">
+        <div>
+          <img [src]="imagen2" class="truck" alt="truck">
+        </div>
+        <div>
+          <label class="label-1">SOPORTE 24/7 <br><span class="label-2">Contáctenos las 24 horas del día los 7 días de la semana.</span></label>
+      
+        </div>
+      </div>
+      <div class="col-md-2" style="display: flex;">
+        <div>
+          <img [src]="imagen3" class="truck" alt="truck">
+        </div>
+        <div>
+          <label class="label-1">REGRESO 30 DÍAS <br><span class="label-2">Simplemente devuélvalo dentro de los 30 días para un cambio de artículo.</span></label>
+      
+        </div>
+      </div>
+      <div class="col-md-2" style="display: flex;">
+        <div>
+          <img [src]="imagen4" class="truck" alt="truck">
+        </div>
+        <div>
+          <label class="label-1">PAGO 100% SEGURO <br><span class="label-2">Garantizamos un pago seguro con IGV.</span></label>
+      
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- collection banner start
+<section class="pb-0">
+  <div class="container">
+    <div class="row partition2">
+      <div class="col-md-6" *ngFor="let collection of collections">
+        <a [routerLink]="['/shop/collection/left/sidebar']" [queryParams]="{ category: 'fashion'}">
+          <div class="collection-banner p-right text-center">
+            <img [src]="collection.image" class="img-fluid" alt="collection-banner">
+            <div class="contain-banner">
+              <div>
+                <h4>{{collection.save}}</h4>
+                <h2>{{collection.title}}</h2>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ collection banner End -->
+
+<!-- Product slider start-->
+<div class="title1 section-t-space">
+  
+  <label class="label-5">TE PUEDE INTERESAR</label>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="product-para">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section-b-space p-t-0" style="margin-top: 30px;">
+  <div class="container">
+    <div class="row">
+      <div class="col" style="display: flex;">
+        <div class="interes">
+          <div class="celular">
+            <img [src]="celular" class="iconos" alt="truck">
+          </div>
+          <div>
+            <label class="label-3">Celulares</label>
+          </div>
+        </div>
+        <div class="interes">
+          <div class="celulares">
+            <img [src]="celular" class="iconos" alt="truck">
+          </div>
+          <div>
+            <label class="label-3">Celulares</label>
+          </div>
+        </div>
+        <div class="interes">
+          <div class="videojuegos">
+            <img [src]="videojuegos" class="iconos" alt="truck">
+          </div>
+          <div>
+            <label class="label-3">Videojuegos</label>
+          </div>
+        </div>
+        <div class="interes">
+          <div class="moda">
+            <img [src]="moda" class="iconos" alt="truck">
+          </div>
+          <div>
+            <label class="label-3">Moda</label>
+          </div>
+        </div>
+        <div class="interes">
+          <div class="laptop">
+            <img [src]="laptop" class="iconos" alt="truck">
+          </div>
+          <div>
+            <label class="label-3">Computación</label>
+          </div>
+        </div>
+        <div class="interes">
+          <div class="audio">
+            <img [src]="audio" class="iconos" alt="truck">
+          </div>
+          <div>
+            <label class="label-3">Audio</label>
+          </div>
+        </div>
+        <div class="interes">
+          <div class="televisor">
+            <img [src]="televisor" class="iconos" alt="truck">
+          </div>
+          <div>
+            <label class="label-3">Celulares</label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="title1 section-t-space">
+  
+  <label class="label-4">OFERTAS BROOKLYN</label>
+  <label class="ver">Ver Todas ></label>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="product-para">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section-b-space p-t-0" style="margin-top: 30px;">
+  <div class="container">
+    <div class="row">
+      <div class="col" >
+        <owl-carousel-o [options]="ProductSliderConfig" class="product-m home-slider">
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template> 
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="title1 section-t-space">
+  <label class="label-4">LOS MÁS VENDIDOS</label>
+  <label class="ver">Ver Todas ></label>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="product-para">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section-b-space p-t-0" style="margin-top: 30px;">
+  <div class="container">
+    <div class="row">
+      <div class="col" >
+        <owl-carousel-o [options]="ProductSliderConfig" class="product-m home-slider">
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template> 
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="title1 section-t-space">
+  
+  <label class="label-6">NOVEDADES</label>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="product-para">
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="pb-0">
+  <div class="container">
+    <div class="row partition2">
+      <div class="col-md-6 " style="display: flex;" >
+        <div class="cuadro-morado">
+          <label  class="label-ultimo">ÚLITMOS DÍAS</label><br>
+          <p class="parrafo-ultimo">Calzado adidas con 20% de dcto. en running</p><br>
+          <label  class="btn btn-link button-link"><span class="label-ver">Ver más ></span> </label>
+        </div>
+        <div class="deporte">
+          <img [src]="deporte" class="deporte" alt="deporte">
+        </div>
+      </div>
+      <div class="col-md-6 " style="display: flex;" >
+        <div class="cuadro-verde">
+          <label  class="label-ultimo">ÚLITMOS DÍAS</label><br>
+          <p class="parrafo-ultimo">Grandes ofertas en artículos para cocina</p><br>
+          <label  class="btn btn-link button-link"><span class="label-ver">Ver más ></span> </label>
+        </div>
+        <div class="familia">
+          <img [src]="familia" class="deporte" alt="familia">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="title1 section-t-space">
+  <label class="label-4">TIENDAS OFICIALES</label>
+  <label class="ver">Ver Todas ></label>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="product-para">
+        
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section-b-space p-t-0" style="margin-top: 30px;">
+  <div class="container">
+    <div class="row">
+      <div class="col" >
+        <owl-carousel-o [options]="ProductSliderConfig" class="product-m home-slider">
+          <ng-template carouselSlide>
+            <div class="tiendas">
+              <div class="caja">
+                <img [src]="paisaje" class="paisaje" alt="paisaje">
+                <img [src]="north" class="north" alt="north">
+              </div>
+              
+              <div class="ver-tienda">
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+              <div class="fondo-rojo">
+
+              </div>
+            </div>
+          </ng-template> 
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="ofertas">
+              <div class="imagen-tele">
+                <img [src]="tele" class="imagen-tele" alt="truck">
+              </div>
+              <div>
+                <label class="label-precio-anterior">$1.740</label><br>
+                <label class="label-precio">$1234 &nbsp;<span class="dto">40% DTO.</span> </label><br>
+                <p class="parrafo">Refrigeradora Samsung Top Freezer Con Twin Cooling...</p>
+                <label class="label-envio">Envío Gratis</label><br>
+              </div>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Product slider start
+<div class="title1 section-t-space">
+  <h4>special offer</h4>
+  <h2 class="title-inner1">top collection</h2>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6 offset-lg-3">
+      <div class="product-para">
+        <p class="text-center">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry, 
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section-b-space p-t-0">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <owl-carousel-o class="product-m home-slider" [options]="ProductSliderConfig">
+          <ng-container *ngFor="let product of products | slice:0:16">
+            <ng-template carouselSlide>
+              <div class="product-box">
+                <app-product-box-one 
+                  [product]="product" 
+                  [currency]="productService?.Currency"
+                  [thumbnail]="true"
+                  [cartModal]="true">
+                </app-product-box-one>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>
+Product slider End -->
+
+<!-- Parallax banner start
+<section class="p-0">
+  <div class="full-banner parallax-banner1 parallax text-center p-left"
+    [ngStyle]="{'background-image': 'url(assets/images/parallax/1.jpg)'}">
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="banner-contain">
+            <h2>2018</h2>
+            <h3>fashion trends</h3>
+            <h4>special offer</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+Parallax banner End -->
+
+<!-- Tab product start
+<div class="title1 section-t-space">
+  <h4>exclusive products</h4>
+  <h2 class="title-inner1">special products</h2>
+</div>
+<section class="section-b-space p-t-0">
+  <div class="container">
+    <div class="row">
+      <div class="col theme-tab">
+        <ngb-tabset [justify]="'center'" [type]="'pills'" class="tabs tab-title">
+          <ngb-tab *ngFor="let collection of productCollections">
+            <ng-template ngbTabTitle>{{collection}}</ng-template>
+            <ng-template ngbTabContent>
+              <div class="no-slider row">
+                <ng-container *ngFor="let product of getCollectionProducts(collection) | slice:0:8">
+                  <div class="product-box">
+                    <app-product-box-one 
+                      [product]="product" 
+                      [currency]="productService?.Currency"
+                      [thumbnail]="true"
+                      [cartModal]="true">
+                    </app-product-box-one>
+                  </div>
+                </ng-container>
+              </div>
+            </ng-template>
+          </ngb-tab>
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+</section>
+Tab product End -->
+
+<!-- services start-->
+<div class="container">
+  <section class="service border-section small-section">
+    <app-services></app-services>
+  </section>
+</div>
+<!-- services End -->
+
+<!-- blog section start-->
+<section class="blog p-t-0">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="title1 section-t-space">
+          <h4>Recent Story</h4>
+          <h2 class="title-inner1">from the blog</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <app-blog [blogs]="blog"></app-blog>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- blog section End -->
+
+<!-- Instagram section -->
+<section class="instagram">
+  <div class="container-fluid ">
+    <div class="row">
+      <div class="col-md-12 p-0">
+        <h2 class="title-borderless"># instagram</h2>
+        <app-instagram></app-instagram>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Instagram section End -->
+
+<!--  logo section start-->
+<section class="section-b-space">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <app-logo [logos]="logo"></app-logo>
+      </div>
+    </div>
+  </div>
+</section>
+<!--  logo section End-->
+
+<app-newsletter></app-newsletter>
+<app-footer-one></app-footer-one>
+

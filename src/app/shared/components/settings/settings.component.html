@@ -1,0 +1,161 @@
+<div class="icon-nav">
+  <ul>
+    <li class="onhover-div mobile-search search-widgets" id="search-widgets">
+      
+      <ng-template #content let-modal class="modal-ubicacion">
+        <div class="modal-header" >
+          <em class="ti-location-pin fa-2x" style="margin-top: 5px;margin-left: 87px;" ></em>
+          <label class="modal-title" >Selecciona tu Ubicación</label>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="dateOfBirth" class="label-modal-body">Para continuar porfavor selecciona la ubicación más cercana a tu domicilio</label>
+              <div class="row">
+                <select class="select-1">
+                  <option selected>Región</option>
+                </select>
+                <select class="select-2">
+                  <option selected>Ciudad</option>
+                </select>
+                <select class="select-2">
+                  <option selected>Distrito</option>
+                </select>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary button-modal" (click)="modal.close('Save click')">Confirmar</button>
+        </div>
+      </ng-template>
+      <div>
+        <em class="ti-location-pin location-boton fa-2x" ></em>
+        <label class="label-1">Seleccione <br><span class="label-2">Ubicación</span></label>
+        <em class=" ti-angle-down location-flecha" (click)="open(content)"></em>
+      </div>
+    </li>
+    <li class="onhover-div mobile-setting">
+      <div>
+        <em class="ti-user button-user fa-2x"></em>&nbsp;
+        <label class="label-1">Hola,ingresa ahora <br> <span class="label-2">Mi cuenta y pedidos</span></label>
+        <em class=" ti-angle-down location-flecha" ></em>
+      </div>
+      <div class="show-div setting">
+        <ul>
+          <li >
+            
+            <form>
+              <div class="form-group">
+                <label class="label-3">Ingresa a tu Cuenta </label>
+              </div>
+              <div class="form-group">
+                <label for="input1" >Correo Electrónico</label>
+                <input type="email" class="form-control" id="input1" >
+              </div>
+              <div class="form-group">
+                <label for="input2" >Contraseña</label>
+                <input type="email" class="form-control" id="input2" >
+              </div>
+              <button type="submit" class="btn btn-primary button-ingresa">Ingresar ahora</button>
+              <button type="submit" class="btn btn-secondary button-crea">Crear Cuenta</button>
+              <div class="form-group">
+                <label  class=label-5>¿Olvidaste tu contraseña? Recupérala</label>
+              </div>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="onhover-div mobile-setting">
+      <div>
+        <span class="cart_qty_cls">{{ products.length }}</span>
+        <em class="ti-bell button-user fa-2x"></em>
+      </div>
+      <div class="show-div setting list-group">
+        <ul>
+          <li >  
+            <div class="list-group">
+              
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img [src]="themeLogo" class="img-fluid" alt="logo">
+                  </div>
+                  <div class="col-md-9">
+                    <label class="label-6">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img [src]="themeLogo" class="img-fluid" alt="logo">
+                  </div>
+                  <div class="col-md-9">
+                    <label class="label-6">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
+                  </div>
+                </div>
+              </a>
+              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                <div class="row">
+                  <div class="col-md-3">
+                    <img [src]="themeLogo" class="img-fluid" alt="logo">
+                  </div>
+                  <div class="col-md-9">
+                    <label class="label-6">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="onhover-div mobile-cart">
+      
+      <div>
+          <!--<img src="assets/images/icon/cart.png" class="img-fluid" alt="">-->
+          <span class="cart_qty_cls">{{ products.length }}</span>
+          <em class="ti-shopping-cart logo-cart fa-2x " (click)="leftMenuToggle()" ></em>      
+      </div>
+      <ul class="show-div shopping-cart" *ngIf='products.length'>
+        <li *ngFor="let product of products">
+          <div class="media">
+            <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+              <img class="mr-3" [src]="product?.images[0].src" [alt]="product?.images[0].alt">
+            </a>
+            <div class="media-body">
+              <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
+                <h4>{{ product?.title }}</h4>
+              </a>
+              <h4>
+                <span>
+                  {{ product?.quantity }} x 
+                  {{ product?.price * productService?.Currency.price | discount:product | currency:productService?.Currency.currency:'symbol' }}
+                </span>
+              </h4>
+            </div>
+          </div>
+          <div class="close-circle" (click)="removeItem(product)">
+            <a href="javascript:void(0)"><i class="fa fa-times" aria-hidden="true"></i></a>
+          </div>
+        </li>
+        <li>
+          <div class="total">
+            <h5>subtotal : <span>{{ getTotal | async | currency:productService?.Currency.currency:'symbol' }}</span></h5>
+          </div>
+        </li>
+        <li>
+          <div class="buttons">
+            <a [routerLink]="['/shop/cart']" class="view-cart">view cart</a>
+            <a [routerLink]="['/shop/checkout']" class="checkout">checkout</a>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

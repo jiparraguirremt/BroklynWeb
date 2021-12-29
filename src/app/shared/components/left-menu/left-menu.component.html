@@ -1,0 +1,191 @@
+<div class="navbar">
+    <!--<a href="javascript:void(0)" (click)="leftMenuToggle()">
+      <div class="bar-style"><i class="fa fa-bars sidebar-bar" aria-hidden="true"></i></div>
+    </a>-->
+    <div id="mySidenav" class="sidenav" [class.openSide]="navServices?.leftMenuToggle">
+      <a href="javascript:void(0)" class="sidebar-overlay" (click)="leftMenuToggle()"></a>
+      <nav>
+        <div class="header" (click)="leftMenuToggle()">
+          <div class="row">
+            <div class="col-md-6">
+              <label class="label">Carrito</label>
+            </div>
+            <div class="col-md-6">
+              <em class="ti-close close" ></em> 
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <label class="label-2">2 artículos</label>
+            </div>
+            <div class="col-md-6">
+              <label class="label-2 pull-right">Subtotal:&nbsp; <span class="span">$ 6561.00</span></label>
+            </div>
+          </div>
+        </div>
+        <div class="body">
+          <div class="cuadro">
+              <img [src]="themeLogo" class="img-fluid imagen pull-left" alt="logo">
+              <label class="label-4">Refrigeradora Samsumg top <br> Freezer con twin Cooling</label>
+              <em class="ti-trash basurero pull-right " ></em> <br>
+              <label class="label-5">$1234.00</label>
+              <label class="label-6 pull-right">$1.740</label><br>
+              <label class="label-7 pull-right">40% DTO.</label><br>
+              <label class="label-8">Cantidad &nbsp;<span class="label-9">1 unidad <em class=" ti-angle-down"></em></span></label>
+          </div>
+          <div class="cuadro">
+            <img [src]="themeLogo" class="img-fluid imagen pull-left" alt="logo">
+            <label class="label-4">Refrigeradora Samsumg top <br> Freezer con twin Cooling</label>
+            <em class="ti-trash basurero pull-right " ></em> <br>
+            <label class="label-5">$1234.00</label>
+            <label class="label-6 pull-right">$1.740</label><br>
+            <label class="label-7 pull-right">40% DTO.</label><br>
+            <label class="label-8">Cantidad &nbsp;<span class="label-9">1 unidad <em class=" ti-angle-down"></em></span></label>
+          </div>
+            <div class="cuadro">
+            <img [src]="themeLogo" class="img-fluid imagen pull-left" alt="logo">
+            <label class="label-4">Refrigeradora Samsumg top <br> Freezer con twin Cooling</label>
+            <em class="ti-trash basurero pull-right " ></em> <br>
+            <label class="label-5">$1234.00</label>
+            <label class="label-6 pull-right">$1.740</label><br>
+            <label class="label-7 pull-right">40% DTO.</label><br>
+            <label class="label-8">Cantidad &nbsp;<span class="label-9">1 unidad <em class=" ti-angle-down"></em></span></label>
+          </div>
+        </div>
+        <div class="footer">
+          <button type="submit" class="btn btn-primary button-compra"><span class="span-1"><em class=" ti-shopping-cart"></em> Compra Ahora</span></button><br>
+          <button type="submit" class="btn btn-secondary button-seguir"><span class="span-2"> Seguir Comprando</span></button>
+      
+        </div>
+        <!--<ul id="sub-menu" class="sidebar-menu">
+          <li *ngFor="let menuItem of menuItems">
+ 
+              <a href="javascript:void(0)" *ngIf="menuItem.type === 'sub'" 
+                  (click)="toggletNavActive(menuItem)">
+                 {{menuItem.title}}
+                 <span class="sub-arrow"  *ngIf="menuItem.children"></span>
+              </a>
+          
+              <a [routerLink]="menuItem.path" *ngIf="menuItem.type === 'link'">
+                 {{menuItem.title}}
+                 <span class="sub-arrow" *ngIf="menuItem.children"></span>
+              </a>
+       
+              <a href="{{ menuItem.path }}" *ngIf="menuItem.type === 'extLink'">
+                 {{menuItem.title}}
+                 <span class="sub-arrow" *ngIf="menuItem.children"></span>
+              </a>
+     
+              <a href="{{ menuItem.path }}" *ngIf="menuItem.type === 'extTabLink'">
+                 {{menuItem.title}}
+                 <span class="sub-arrow" *ngIf="menuItem.children"></span>
+              </a>
+
+
+                <ng-container *ngIf="!menuItem.megaMenu">
+                  <li *ngFor="let childrenItem of menuItem.children">
+
+                    <a [routerLink]="childrenItem.path" *ngIf="childrenItem.type === 'link'">
+                       {{childrenItem.title}}
+
+                    <a href="{{ !childrenItem.type ? null : childrenItem.path }}" *ngIf="childrenItem.type === 'extLink'">
+                      {{childrenItem.title}}
+                    </a>
+  
+                    <a href="{{ !childrenItem.type ? null : childrenItem.path }}" target="_blank" *ngIf="childrenItem.type === 'extTabLink'">
+                       {{childrenItem.title}}
+                    </a>
+           
+                    <ul *ngIf="childrenItem.children">
+                      <li *ngFor="let childrenSubItem of childrenItem.children">
+         
+                          <a [routerLink]="childrenSubItem.path" *ngIf="childrenSubItem.type === 'link'">
+                             {{childrenSubItem.title}}
+                          </a>
+              
+                          <a href="{{ childrenSubItem.path }}" *ngIf="childrenSubItem.type === 'extLink'">
+                            {{childrenSubItem.title}}
+                          </a>
+       
+                          <a href="{{ childrenSubItem.path }}" target="_blank" *ngIf="childrenSubItem.type === 'extTabLink'">
+                             {{childrenSubItem.title}}
+                          </a>
+          
+                          <ul *ngIf="childrenSubItem.children">
+                            <li *ngFor="let childrenSubSubItem of childrenSubItem.children">
+                         
+                                <a [routerLink]="childrenSubSubItem.path" *ngIf="childrenSubSubItem.type === 'link'">
+                                   {{childrenSubSubItem.title}}
+                                </a>
+                          
+                                <a href="{{ childrenSubSubItem.path }}" *ngIf="childrenSubSubItem.type === 'extLink'">
+                                  {{childrenSubSubItem.title}}
+                                </a>
+                     
+                                <a href="{{ childrenSubSubItem.path }}" target="_blank" *ngIf="childrenSubSubItem.type === 'extTabLink'">
+                                   {{childrenSubSubItem.title}}
+                                </a>
+                         
+                                <ul *ngIf="childrenSubSubItem.children">
+                                  <li *ngFor="let childrenSubSubSubItem of childrenSubSubItem.children">
+                              
+                                      <a [routerLink]="childrenSubSubSubItem.path" *ngIf="childrenSubSubSubItem.type === 'link'">
+                                         {{childrenSubSubSubItem.title}}
+                                      </a>
+                                  
+                                      <a href="{{ childrenSubSubSubItem.path }}" *ngIf="childrenSubSubSubItem.type === 'extLink'">
+                                        {{childrenSubSubSubItem.title}}
+                                      </a>
+                                
+                                      <a href="{{ childrenSubSubSubItem.path }}" target="_blank" *ngIf="childrenSubSubSubItem.type === 'extTabLink'">
+                                         {{childrenSubSubSubItem.title}}
+                                      </a>
+                                  </li>
+                                </ul>
+                            </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ng-container>
+        
+        
+            
+                <ng-container *ngIf="menuItem.megaMenu">
+                <li>
+                  <div class="row m-0">
+                    <div class="col-xl-4" *ngFor="let childrenItem of menuItem.children">
+                      <div class="link-section">
+                        <h5>{{childrenItem.title}}</h5>
+                        <ul>
+                          <li *ngFor="let childrenSubItem of childrenItem.children">
+                 
+                              <a [routerLink]="childrenSubItem.path" *ngIf="childrenSubItem.type === 'link'">
+                                 {{childrenSubItem.title}}
+                              </a>
+                          
+                              <a href="{{ childrenSubItem.path }}" *ngIf="childrenSubItem.type === 'extLink'">
+                                {{childrenSubItem.title}}
+                              </a>
+                              
+                              <a href="{{ childrenSubItem.path }}" target="_blank" *ngIf="childrenSubItem.type === 'extTabLink'">
+                                 {{childrenSubItem.title}}
+                              </a>
+                          </li>
+                        </ul>    
+                      </div>
+                    </div>
+                    <div class="col-xl-4">
+                        <a [routerLink]="['/home/one']" class="mega-menu-banner"><img src="" alt="" class="img-fluid"></a>
+                    </div>
+                  </div>
+                </li>
+                </ng-container>
+          
+              </ul>
+            </li>
+        </ul>-->
+      </nav>
+    </div>
+</div>
+  
