@@ -2,6 +2,7 @@ import { Component, OnInit ,Input} from '@angular/core';
 import { ProductSlider } from '../../../shared/data/slider';
 import { Product } from '../../../shared/classes/product';
 import { ProductService } from '../../../shared/services/product.service';
+import { TiendaSlider } from '../../../shared/data/slider';
 
 @Component({
   selector: 'app-fashion-one',
@@ -24,6 +25,7 @@ export class FashionOneComponent implements OnInit {
   @Input()deporte :string='assets/images/icon/deporte.png'
   @Input()north :string='assets/images/icon/north.png'
   @Input()paisaje :string='assets/images/icon/paisaje.png'
+  @Input()negocio :string='assets/images/icon/iniciar-un-negocio-propio.png'
 
 
   public products: Product[] = [];
@@ -43,6 +45,7 @@ export class FashionOneComponent implements OnInit {
   }
 
   public ProductSliderConfig: any = ProductSlider;
+  public TiendaSliderConfig: any = TiendaSlider;
 
   public sliders = [{
     //title: 'welcome to fashion',

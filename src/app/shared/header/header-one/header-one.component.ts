@@ -13,6 +13,11 @@ export class HeaderOneComponent implements OnInit {
   @Input() sticky: boolean = true; // Default false
   @Input() arrow: string = 'assets/images/icon/arrow-circle-right.png'; 
   @Input() arrow1: string = 'assets/images/icon/arrow-circle-right-1.png'; 
+  @Input() figuras: string = 'assets/images/icon/figuras.png';
+  @Input() ofertas: string = 'assets/images/icon/ofertas.png'; 
+  @Input() vender: string = 'assets/images/icon/vender.png'; 
+  @Input() reloj: string = 'assets/images/icon/reloj.png'; 
+  @Input() corazon: string = 'assets/images/icon/corazon.png'; 
   
   public stick: boolean = false;
   categoria:boolean = false

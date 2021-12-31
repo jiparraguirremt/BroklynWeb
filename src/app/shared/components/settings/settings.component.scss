@@ -3,6 +3,8 @@
     left: 865px;
     width: 16px;
     height: 23px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     transform: matrix(1, 0, 0, 1, 0, 0);
     //background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     //background: #FFFFFF 0% 0% no-repeat padding-box;
@@ -22,6 +24,7 @@
 }
 .location-flecha{
     margin-left: 10px;
+    margin-right: 30px;
     top: 18px;
     left: 991px;
     width: 24px;
@@ -36,7 +39,7 @@
 }
 
 .label-1{
-   
+    margin-top: 10px;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/14px Arial;
     letter-spacing: var(--unnamed-character-spacing-0);
     color: var(--unnamed-color-ffffff);
@@ -134,6 +137,8 @@
     left: 1057px;
     width: 21px;
     height: 21px;
+    margin-right: 10px;
+    margin-bottom: 10px;
     //background: var(--unnamed-color-ffffff) 0% 0% no-repeat padding-box;
     //background: #FFFFFF 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -233,4 +238,67 @@
     height: 22px;
     color: #FFFFFF;
     cursor: pointer;
+}
+.campana{
+    width: 18px;
+    height: 21px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.noti{
+    top: 19px;
+    left: 1282px;
+    font: var(--unnamed-font-style-normal) normal bold 13px/15px Arial;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    font: normal normal bold 13px/15px Arial;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    width: 21px;
+    height: 21px;
+    background: #000000 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.carrito{
+    width: 26px;
+    height: 22px;
+    margin-bottom: 10px;
+    margin-right: 80px;
+}
+.modal-header{
+    border-bottom:0px ;
+}
+.modal-footer{
+    border-top: 0px;
+}
+.mensaje{
+    margin-right: 10px;
+    margin-left: 20px;
+    width: 115px;
+    height: 30px;
+    background: var(--unnamed-color-ebebeb) 0% 0% no-repeat padding-box;
+    background: #EBEBEB 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+}
+.compra{
+    
+    width: 115px;
+    height: 30px;
+    background: var(--unnamed-color-ebebeb) 0% 0% no-repeat padding-box;
+    background: #EBEBEB 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+    opacity: 1;
+}
+.label-mensaje{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/22px Arial;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--azul-conexión);
+    text-align: left;
+    font: normal normal normal 12px/22px Arial;
+    letter-spacing: 0px;
+    color: #0089D0;
+    opacity: 1;
 }

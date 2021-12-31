@@ -73,80 +73,89 @@
       <div class="col-md-4">
         <div class="main-nav-center" (click)="abrirCategoria()" >
           <div [ngClass]="{'categoria': categoria == false,'categoria1':categoria == true }">
+            <a >
+              <img [src]="figuras" class="figuras" alt="figuras">
+            </a>
             <label *ngIf="!categoria" class="label-2">Todas las categorías<img [src]="arrow" class="arrow" alt="arrow" ></label>
             <label *ngIf="categoria" class="label-2">Todas las categorías<img [src]="arrow1" class="arrow" alt="arrow"></label>
+          </div>
+          <div class="show-div setting list-group" *ngIf="categoria">
+            <ul>
+              <li>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Categoría 1</label>
+                </div>
+                <div class="lista-categorias">
+                  <img [src]="arrow" class="imagen-x" alt="arrow" >
+                  <label class="label-3">Más Categorías...</label>
+                </div>
+              </li>
+            </ul>
           </div>              
         </div>
-        <div class="show-div setting list-group" *ngIf="categoria">
-          <ul>
-            <li>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Categoría 1</label>
-              </div>
-              <div class="lista-categorias">
-                <img [src]="arrow" class="imagen-x" alt="arrow" >
-                <label class="label-3">Más Categorías...</label>
-              </div>
-            </li>
-          </ul>
-        </div>
+        
       </div>
   
-      <div class="col-md-8" style="display: flex; justify-content:flex-end;">
+      <div class="col-md-8" style="display: flex; justify-content:center;">
         <div class="ofertas ">
+          <img [src]="ofertas" class="tamaño1" alt="arrow" >
           <label class="label-4">Ofertas</label>
         </div>
         <div class="vender">
+          <img [src]="vender" class="tamaño2" alt="arrow" >
           <label class="label-4">Vender</label>
         </div>
         <div class="tienda">
+          <img [src]="vender" class="tamaño2" alt="arrow" >
           <label class="label-4">Tiendas Oficiales</label>
         </div>
         <div class="favoritos">
+          <img [src]="corazon" class="tamaño3" alt="arrow" >
           <label class="label-4">Favoritos</label>
         </div>
         <div class="historial">
+          <img [src]="reloj" class="tamaño4" alt="arrow" >
           <label class="label-4">Historial</label>
         </div>
       </div>

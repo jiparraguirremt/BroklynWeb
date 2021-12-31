@@ -197,15 +197,38 @@ export let ProductSlider: any = {
     navClass: [ 'owl-prev', 'owl-next' ],
     navText: [ '<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>' ],
     responsive: {
+        
+        0:{
+            items:3
+        },
+        600:{
+            items:3
+        },
+        1000:{
+            items:5
+        }
+    }
+}
+//tienda Slider
+export let TiendaSlider: any = {
+    loop: false,
+    dots: false,
+    nav: true,
+    navSpeed: 300,
+    navContainerClass: 'owl-nav',
+    navClass: [ 'owl-prev', 'owl-next' ],
+    navText: [ '<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>' ],
+    responsive: {
+        
         991: {
             items: 4
         },
         767: {
             items: 3
         },
-        420: {
+        586: {
             items: 2
-        }, 
+        },
         0: {
             items: 1
         }

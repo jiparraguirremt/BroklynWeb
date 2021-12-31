@@ -4,7 +4,7 @@
       
       <ng-template #content let-modal class="modal-ubicacion">
         <div class="modal-header" >
-          <em class="ti-location-pin fa-2x" style="margin-top: 5px;margin-left: 87px;" ></em>
+          <img [src]="ubicacion" class="ubicacion" alt="logo">
           <label class="modal-title" >Selecciona tu Ubicación</label>
           <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
             <span aria-hidden="true">&times;</span>
@@ -33,14 +33,14 @@
         </div>
       </ng-template>
       <div>
-        <em class="ti-location-pin location-boton fa-2x" ></em>
-        <label class="label-1">Seleccione <br><span class="label-2">Ubicación</span></label>
+        <img [src]="ubicacion" class="location-boton" alt="logo">
+        <label class="label-1">Seleccione <br><span class="label-2">Tu Ubicación</span></label>
         <em class=" ti-angle-down location-flecha" (click)="open(content)"></em>
       </div>
     </li>
     <li class="onhover-div mobile-setting">
       <div>
-        <em class="ti-user button-user fa-2x"></em>&nbsp;
+        <img [src]="cuenta" class="button-user" alt="logo">
         <label class="label-1">Hola,ingresa ahora <br> <span class="label-2">Mi cuenta y pedidos</span></label>
         <em class=" ti-angle-down location-flecha" ></em>
       </div>
@@ -73,42 +73,51 @@
     <li class="onhover-div mobile-setting">
       <div>
         <span class="cart_qty_cls">{{ products.length }}</span>
-        <em class="ti-bell button-user fa-2x"></em>
+        <img [src]="campana" class="campana" alt="logo">
       </div>
       <div class="show-div setting list-group">
         <ul>
           <li >  
             <div class="list-group">
               
-              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start ">
+              <a class="list-group-item list-group-item-action flex-column align-items-start" style="cursor: pointer;" >
                 <div class="row">
                   <div class="col-md-3">
                     <img [src]="themeLogo" class="img-fluid" alt="logo">
                   </div>
                   <div class="col-md-9">
-                    <label class="label-6">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
+                    <label class="label-6" style="cursor: pointer;" (click)="mostrarBotones()">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
+                    
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="botones" *ngIf="botones">
+                    <button type="button" class="btn btn-secondary mensaje"><span class="label-mensaje">Ver Mensaje</span> </button>
+                    <button type="button" class="btn btn-secondary compra"><span class="label-mensaje">Ver Compra</span> </button>
                   </div>
                 </div>
               </a>
-              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <a  class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="row">
                   <div class="col-md-3">
                     <img [src]="themeLogo" class="img-fluid" alt="logo">
                   </div>
                   <div class="col-md-9">
-                    <label class="label-6">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
+                    <label class="label-6" style="cursor: pointer;" (click)="mostrarBotones()">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
                   </div>
                 </div>
+                
               </a>
-              <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+              <a  class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="row">
                   <div class="col-md-3">
                     <img [src]="themeLogo" class="img-fluid" alt="logo">
                   </div>
                   <div class="col-md-9">
-                    <label class="label-6">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
+                    <label class="label-6" style="cursor: pointer;" (click)="mostrarBotones()">Te regalamos Bs200.00 en Huawei <br> <span class="label-7">Usa el cupón: LAPTOP en toda la Tienda Oficial. Min. de compra Bs 1199 | Max. Dscto Bs Bs200</span></label>
                   </div>
                 </div>
+                
               </a>
             </div>
           </li>
@@ -120,9 +129,9 @@
       <div>
           <!--<img src="assets/images/icon/cart.png" class="img-fluid" alt="">-->
           <span class="cart_qty_cls">{{ products.length }}</span>
-          <em class="ti-shopping-cart logo-cart fa-2x " (click)="leftMenuToggle()" ></em>      
+          <img [src]="carrito" class="carrito" alt="logo" (click)="leftMenuToggle()">    
       </div>
-      <ul class="show-div shopping-cart" *ngIf='products.length'>
+      <!--<ul class="show-div shopping-cart" *ngIf='products.length'>
         <li *ngFor="let product of products">
           <div class="media">
             <a [routerLink]="['/shop/product/left/sidebar/', product.title.replace(' ', '-')]">
@@ -155,7 +164,7 @@
             <a [routerLink]="['/shop/checkout']" class="checkout">checkout</a>
           </div>
         </li>
-      </ul>
+      </ul>-->
     </li>
   </ul>
 </div>

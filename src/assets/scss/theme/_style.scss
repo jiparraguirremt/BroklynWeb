@@ -4562,7 +4562,7 @@ footer {
         display: flex;
         height: 100%;
         align-items: center;
-        border-right: 1px solid $round-border;
+        //border-right: 1px solid $round-border;
         text-align: left;
         p {
             line-height: 1;
@@ -4927,7 +4927,9 @@ footer {
         display: flex;
         align-items: center;
         justify-content: flex-end;
+        
         li {
+            
             padding-left: 7px;
             padding-right: 7px;
             display: inline-block;
@@ -5208,21 +5210,23 @@ footer {
 .cart_qty_cls {
     
     background: #000000 0% 0% no-repeat padding-box;
-    width: 81px;
-    height: 81px;
+    width: 120px;
+    height: 120px;
     color: #fff;
     border-radius: 100%;
     text-align: center;
-    font-size: 20px;
+    //font-size: 20px;
     line-height: 20px;
     font-weight: 400;
-    top: 39px;
-    right: -8px;
+    //top: 39px;
+    //right: -8px;
     padding-right:  5px;
     padding-left:  5px;
     font: normal normal bold 13px/15px Arial;
     letter-spacing: 0px;
     opacity: 1;
+    margin-right: 7px;
+    margin-bottom: 20px;
 }
 
 .product-filter-tags {

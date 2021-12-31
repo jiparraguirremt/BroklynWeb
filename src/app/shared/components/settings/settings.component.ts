@@ -15,10 +15,16 @@ import { Router } from '@angular/router';
 })
 export class SettingsComponent implements OnInit {
   @Input() themeLogo: string = 'assets/images/icon/Imagen 57.png'; // Default Logo
+  @Input() ubicacion: string = 'assets/images/icon/location.png'; 
+  @Input() cuenta: string = 'assets/images/icon/cuenta.png'; 
+  @Input() campana: string = 'assets/images/icon/campana.png';
+  @Input() carrito: string = 'assets/images/icon/carrito.png'; 
   closeResult = '';
   public menuItems: Menu[];
 
   public products: Product[] = []
+
+  public botones :boolean = false;
   
   public languages = [{ 
     name: 'English',
@@ -100,10 +106,18 @@ export class SettingsComponent implements OnInit {
   leftMenuToggle(): void {
     this.navServices.leftMenuToggle = !this.navServices.leftMenuToggle;
   }
+  mostrarBotones(){
+
+    if(this.botones == true){
+      this.botones = false;
+    }else{
+      this.botones = true;
+    }
+  }
 
   // Click Toggle menu (Mobile)
-  toggletNavActive(item) {
-    item.active = !item.active;
-  }
+  //toggletNavActive(item) {
+   // item.active = !item.active;
+ // }
 
 }
