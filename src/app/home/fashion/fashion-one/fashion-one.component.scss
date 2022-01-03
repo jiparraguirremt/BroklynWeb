@@ -9,6 +9,7 @@
 }
 .truck{
     margin-top: 19px;
+    margin-right: 30px;
     top: 452px;
     left: 191px;
     width: 58px;
@@ -16,7 +17,7 @@
 }
 .label-1{
     margin-top: 29px;
-    margin-left: 25px;
+    //margin-left: 10px;
     font: var(--unnamed-font-style-normal) normal bold 14px/17px Product Sans;
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
@@ -26,10 +27,11 @@
     opacity: 1;
 }
 .label-2{
+    //margin-left: 10px;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/15px Product Sans;
     letter-spacing: var(--unnamed-character-spacing-0);
     text-align: left;
-    font: normal normal normal 12px/15px Product Sans;
+    font: normal normal normal 11px/14px Product Sans;
     letter-spacing: 0px;
     color: #5A5A5A;
     opacity: 1;
@@ -264,21 +266,24 @@
 }
 .parrafo-ultimo{
     margin-left: 22px;
-    font: var(--unnamed-font-style-normal) normal medium 24px/29px Arial;
-    letter-spacing: var(--unnamed-character-spacing-0);
-    color: var(--unnamed-color-ffffff);
+    //font: var(--unnamed-font-style-normal) normal medium 24px/29px Arial;
+    //letter-spacing: var(--unnamed-character-spacing-0);
+    //color: var(--unnamed-color-ffffff);
     text-align: left;
-    font: normal normal medium 24px/29px Arial;
+    font: normal normal medium 29px/34px Arial;
     letter-spacing: 0px;
     color: #FFFFFF;
     opacity: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
 }
 .button-link{
     margin-left: 22px;
+    margin-top: 10px;
     top: 2091px;
     left: 239px;
     width: 120px;
-    height: 40px;
+    //height: 40px;
     border: 1px solid var(--unnamed-color-ffffff);
     border: 1px solid #FFFFFF;
     opacity: 1;
@@ -291,7 +296,7 @@
     text-align: right;
     font: normal normal normal 14px/16px Arial;
     letter-spacing: 0px;
-    color: #FFFFFF;
+    //color: #FFFFFF;
     opacity: 1;
 }
 .deporte{
@@ -435,5 +440,48 @@
     left: 526px;
     width: 859px;
     height: 308px;
+    opacity: 1;
+}
+.lorem{
+    margin-left: 23px;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 14px/22px Arial;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    text-align: left;
+    font: normal normal normal 14px/22px Arial;
+    letter-spacing: 0px;
+    color: #000000;
+    opacity: 1;
+}
+.label-ver2{
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 14px/16px Arial;
+    letter-spacing: var(--unnamed-character-spacing-0);
+    color: var(--negro-berry);
+    text-align: right;
+    font: normal normal normal 14px/16px Arial;
+    letter-spacing: 0px;
+    color: #2A2A2A;
+    opacity: 1;
+}
+
+.button-link2{
+    align-items: center;
+    margin-left: 22px;
+    margin-top: 10px;
+    top: 2091px;
+    left: 239px;
+    width: 120px;
+    //height: 40px;
+    border: 1px solid var(--unnamed-color-ffffff);
+    border: 1px solid black;
+    opacity: 1;
+}
+.label-head{
+    //font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 14px/22px Arial;
+    //letter-spacing: var(--unnamed-character-spacing-0);
+    //color: var(--nuevo-gris-fondo);
+    text-align: left;
+    font: normal normal normal 14px/22px Arial;
+    letter-spacing: 0px;
+    color: darkgrey;
     opacity: 1;
 }

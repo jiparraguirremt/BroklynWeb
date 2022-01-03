@@ -3,9 +3,11 @@ export let HomeSlider: any = {
     loop: true,
     nav: true,
     dots: false,
+    autoplayTimeout:5000,
+    autoplay:true,
     navContainerClass: 'owl-nav',
     navClass: [ 'owl-prev', 'owl-next' ],
-    navText: [ '<i class="ti-angle-left"></i>', '<i class="ti-angle-right"></i>' ],
+    navText: [ '<i class="ti-angle-left" ></i>', '<i class="ti-angle-right" ></i>' ],
     responsive: {
         0: {
             items: 1

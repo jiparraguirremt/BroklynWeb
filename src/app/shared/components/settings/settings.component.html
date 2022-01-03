@@ -42,9 +42,9 @@
       <div>
         <img [src]="cuenta" class="button-user" alt="logo">
         <label class="label-1">Hola,ingresa ahora <br> <span class="label-2">Mi cuenta y pedidos</span></label>
-        <em class=" ti-angle-down location-flecha" ></em>
+        <em class=" ti-angle-down location-flecha" (click)="openCuenta()"></em>
       </div>
-      <div class="show-div setting">
+      <div class="show-div setting" *ngIf="cuentaAbrir">
         <ul>
           <li >
             
@@ -73,9 +73,9 @@
     <li class="onhover-div mobile-setting">
       <div>
         <span class="cart_qty_cls">{{ products.length }}</span>
-        <img [src]="campana" class="campana" alt="logo">
+        <img [src]="campana" class="campana" alt="logo" (click)="abrirNotificaciones()"> 
       </div>
-      <div class="show-div setting list-group">
+      <div class="show-div setting list-group" *ngIf="notificaciones">
         <ul>
           <li >  
             <div class="list-group">

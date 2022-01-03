@@ -21,7 +21,8 @@ export class SettingsComponent implements OnInit {
   @Input() carrito: string = 'assets/images/icon/carrito.png'; 
   closeResult = '';
   public menuItems: Menu[];
-
+  public cuentaAbrir:boolean = false;
+  public notificaciones:boolean = false;
   public products: Product[] = []
 
   public botones :boolean = false;
@@ -112,6 +113,20 @@ export class SettingsComponent implements OnInit {
       this.botones = false;
     }else{
       this.botones = true;
+    }
+  }
+  openCuenta(){
+    if(this.cuentaAbrir == true){
+      this.cuentaAbrir = false;
+    }else{
+      this.cuentaAbrir = true;
+    }
+  }
+  abrirNotificaciones(){
+    if(this.notificaciones == true){
+      this.notificaciones = false;
+    }else{
+      this.notificaciones = true;
     }
   }
 

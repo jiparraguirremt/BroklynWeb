@@ -4503,7 +4503,7 @@ footer {
             right: -10px;
         }
         i {
-            color: white;
+            color: darkgrey;
             font-size: 25px;
         }
     }
@@ -4527,26 +4527,26 @@ footer {
                     }
                 }
             }
-            h4 {
-                color: $white;
+            .label {
+                color: darkgrey;
             }
             li {
                 a {
-                    color: $grey-font;
+                    color: darkgrey;
                 }
             }
             .contact-list {
                 i {
-                    color: $grey-font;
+                    color: darkgrey;
                 }
                 li {
-                    color: $grey-font;
+                    color: darkgrey;
                 }
             }
         }
         .footer-social {
             i {
-                color: $grey-font;
+                color: darkgrey;
             }
         }
     }
@@ -4828,11 +4828,11 @@ footer {
         margin-bottom: 18px;
     }
     .sub-title {
-        h4 {
-            color: $dark-font;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            font-weight: 700;
+        label {
+            color: darkgrey;
+            //margin-bottom: 25px;
+            //text-transform: uppercase;
+            //font-weight: 700;
         }
         li {
             position: relative;
@@ -13247,8 +13247,8 @@ footer {
                     }
                 }
             }
-            h4 {
-                color: $white;
+            label {
+                color: darkgrey;
             }
             li {
                 a {
